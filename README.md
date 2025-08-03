@@ -1,130 +1,59 @@
-🗂️ TaskHub - Gerenciador de Tarefas Corporativo
-Sistema completo de gerenciamento de tarefas com autenticação via RM (TOTVS), dashboards inteligentes, controle por equipe e colaborador, envio de notificações por e-mail e interface interativa desenvolvida com Flask e Tailwind CSS.
+# 🗂️ TaskHub - Gerenciador de Tarefas Corporativo
 
-💻 Tecnologias Utilizadas
-Backend
+Sistema de gerenciamento de tarefas corporativas com integração ao **TOTVS RM**, dashboards inteligentes, controle por equipe e colaborador, envio de notificações automáticas por e-mail e uma interface interativa e moderna.
 
-Python 3.10+ com Flask
-Banco de Dados:
-MySQL (armazenamento principal)
-Integração Oracle via cx_Oracle (TOTVS RM)
+---
 
+## 💡 Sobre o Projeto
 
-Email SMTP com autenticação para notificações automáticas
-Sessões com Flask Session para controle de login
+O **TaskHub** foi criado para otimizar a organização de tarefas em empresas, com autenticação inteligente, visualizações personalizadas e integração direta com sistemas legados como o **TOTVS RM**.
 
-Frontend
+---
 
-HTML5 + Tailwind CSS (design responsivo e moderno)
-JavaScript puro (interações e chamadas dinâmicas)
-Chart.js (gráficos no dashboard)
-Login com saudação horária personalizada
+## 💻 Tecnologias Utilizadas
 
+| Stack | Tecnologias |
+|-------|-------------|
+| **Backend** | Python 3.10+, Flask, cx_Oracle (integração RM), SMTP (e-mail), Flask-Session |
+| **Banco de Dados** | MySQL |
+| **Frontend** | HTML5, Tailwind CSS, JavaScript puro, Chart.js |
+| **Integrações** | TOTVS RM (Oracle), Notificações por e-mail |
 
-🔐 Autenticação Inteligente
+---
 
-Login via Chapa + CPF (verificação com RM)
-Cadastro automático no banco MySQL se não existir
-Validação de CPF com 11 dígitos
-Sessões seguras para acesso às funcionalidades
+## ✨ Funcionalidades Desenvolvidas
 
+- 🔐 **Login via Chapa + CPF** (integração ao RM)
+- 📝 **Criação e Gestão de Tarefas** (com anexos e status)
+- 👥 **Controle de Colaboradores e Equipes**
+- ✉️ **Notificações Automáticas por E-mail**
+- 📊 **Dashboards Inteligentes e Dinâmicos**
+- 🎨 **Interface com Design Responsivo (Tailwind CSS)**
+- 🧠 **Saudação Horária Personalizada no Login**
+- 🗂️ **Visualização de Tarefas por Setor e Status**
 
-🎯 Funcionalidades Principais
-👥 Gestão de Colaboradores
+---
 
-Cadastro automático a partir do RM
-Sugestões de autocomplete para chapas/nomes
-Detecção e exibição por setor
-Envio de e-mail de boas-vindas
+## 🖼️ Demonstração Visual
 
-📝 Gestão de Tarefas
+| Funcionalidade                | Captura                                                                                                  | Descrição                                      |
+|-------------------------------|----------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| **Login e Boas-Vindas**        | ![Boas-Vindas](https://github.com/RaquelDaud180/Gerenciador-Tarefas-/blob/main/boasvindas.png) | Interface com saudação horária personalizada   |
+| **Dashboard (Setores e Colaboradores)** | ![Dashboard](https://github.com/RaquelDaud180/Gerenciador-Tarefas-/blob/main/dashboard.png) | Visualização de setores e colaboradores        |
+| **Cards de Tarefas por Status**| ![Cards Tarefas](https://github.com/RaquelDaud180/Gerenciador-Tarefas-/blob/dd83d092e687c8f3ffa587b597860062fc5904c0/Imagem%20do%20WhatsApp%20de%202025-08-02%20%C3%A0(s)%2020.58.41_6532e51a.jpg) | Cards de tarefas destacando status e setor     |
+| **Notificação Atualização** | ![Lista Tarefas](https://github.com/RaquelDaud180/Gerenciador-Tarefas-/blob/dd83d092e687c8f3ffa587b597860062fc5904c0/Imagem%20do%20WhatsApp%20de%202025-08-02%20%C3%A0(s)%2020.56.24_53f55fc5.jpg) | Exibição sempre que atualiza uma tarefa |
 
-Criação de tarefas por título, data, responsável e descrição
-Upload de arquivos (anexos)
-Status da tarefa: Não Iniciado, Pendente, Em Retorno, Concluído
-Retorno (feedback) editável pelo responsável
-Notificações visuais e por e-mail sobre status e retornos
-Exclusão com confirmação (autorizados)
+---
 
-📊 Dashboards e Organização
+## 🛠️ Conhecimentos Técnicos Aplicados
 
-Saudação dinâmica com nome do usuário logado
-Cards e cores personalizadas por departamento
-Lista de tarefas filtradas por setor e status
-Cards de colaboradores com avatar baseado no nome
+- **Python (Flask)**: Desenvolvimento de backend, autenticação, integração com TOTVS RM (via cx_Oracle), controle de sessões e envio de e-mails.
+- **MySQL**: Estruturação e manipulação de dados de colaboradores e tarefas.
+- **HTML5 + Tailwind CSS**: Criação de interfaces responsivas e modernas.
+- **JavaScript Puro**: Interações dinâmicas no frontend sem uso de frameworks pesados.
+- **Chart.js**: Dashboards e visualização de dados em tempo real.
+- **Integração SMTP**: Automação de notificações e e-mails transacionais.
+- **Integração com Sistemas Legados (TOTVS RM)**: Consulta e validação de colaboradores via API Oracle.
 
+---
 
-✉️ Notificações e E-mails
-
-Envio automático de e-mail ao criar tarefa
-E-mail com detalhes da tarefa e links
-Atualização de status gera notificação e e-mail
-Retornos adicionados também geram alertas
-Adição de sino de notificação visual
-
-
-🖼️ Demonstração Visual
-
-
-
-Funcionalidade
-Captura
-Descrição
-
-
-
-Login e Boas-Vindas
-
-Interface com saudação horária personalizada
-
-
-Dashboard
-
-Tarefas por setor com destaque por status
-
-
-Cards de Colaboradores
-
-Avatar automático e visualização por setor
-
-
-Sino de Notificação
-
-Indicador visual de notificações
-
-
-Lista de Tarefas
-
-Exibição por equipe e com ações rápidas
-
-
-
-🔍 Dica: Certifique-se de que o repositório RaquelDaud180/Gerenciador-Tarefas- esteja público e que os arquivos estejam na raiz com os nomes exatos listados.
-
-
-📂 Estrutura da Aplicação
-
-app/
-static/
-css/ (estilos Tailwind CSS)
-js/ (scripts JavaScript)
-images/ (imagens do projeto)
-
-
-templates/
-login.html
-dashboard.html
-tasks.html
-
-
-__init__.py
-
-
-config/
-database.py (conexão MySQL e Oracle)
-email.py (configuração SMTP)
-
-
-requirements.txt (dependências Python)
-README.md
-run.py (execução do Flask)
