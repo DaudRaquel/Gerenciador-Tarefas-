@@ -1,38 +1,130 @@
-# 🗂️ Gerenciador de Tarefas
+🗂️ TaskHub - Gerenciador de Tarefas Corporativo
+Sistema completo de gerenciamento de tarefas com autenticação via RM (TOTVS), dashboards inteligentes, controle por equipe e colaborador, envio de notificações por e-mail e interface interativa desenvolvida com Flask e Tailwind CSS.
 
-Sistema de gerenciamento de tarefas com dashboards interativos, gráficos por setor e controle individualizado de entregas. Ideal para gestão de equipes e visualização de desempenho por colaborador ou grupo.
+💻 Tecnologias Utilizadas
+Backend
 
-## 💻 Tecnologias utilizadas
+Python 3.10+ com Flask
+Banco de Dados:
+MySQL (armazenamento principal)
+Integração Oracle via cx_Oracle (TOTVS RM)
 
-- Python
-- Flask
-- HTML/CSS
-- Tailwind
-- Chart.js
-- Banco de dados: MySQL e Oracle (TOTVS RM)
-- Automatizações com Python
-- Dashboards interativos
 
-## 📊 Funcionalidades
+Email SMTP com autenticação para notificações automáticas
+Sessões com Flask Session para controle de login
 
-- Criação e gestão de tarefas individuais e em grupo
-- Dashboard com gráficos por colaborador e setor
-- Análise de tempo de entrega
-- Filtros interativos por período, status e responsável
-- Login por chapa com senha personalizada
-- Notificações em tempo real e auditoria de ações
+Frontend
 
-## 🖼️ Exemplos visuais
+HTML5 + Tailwind CSS (design responsivo e moderno)
+JavaScript puro (interações e chamadas dinâmicas)
+Chart.js (gráficos no dashboard)
+Login com saudação horária personalizada
 
-| Dashboard | Colaboradores | Tarefas |
-|----------|----------------|--------|
-| ![Dashboard](./ffe.png) | ![Colaborador](./image.png) | ![WhatsApp1](./Imagem%20do%20WhatsApp%20de%202025-08-02%20%C3%A0(s)%2020.58.41_6532e51a.jpg) |
 
-## 📬 Contato
+🔐 Autenticação Inteligente
 
-- [LinkedIn - Raquel Daud](https://www.linkedin.com/in/raquel-daud-72a3991a2/)
-- 📧 Email: daudpython@gmail.com
+Login via Chapa + CPF (verificação com RM)
+Cadastro automático no banco MySQL se não existir
+Validação de CPF com 11 dígitos
+Sessões seguras para acesso às funcionalidades
 
----
 
-🟣 Projeto desenvolvido com apoio do ChatGPT | GPT-4 | DALL·E
+🎯 Funcionalidades Principais
+👥 Gestão de Colaboradores
+
+Cadastro automático a partir do RM
+Sugestões de autocomplete para chapas/nomes
+Detecção e exibição por setor
+Envio de e-mail de boas-vindas
+
+📝 Gestão de Tarefas
+
+Criação de tarefas por título, data, responsável e descrição
+Upload de arquivos (anexos)
+Status da tarefa: Não Iniciado, Pendente, Em Retorno, Concluído
+Retorno (feedback) editável pelo responsável
+Notificações visuais e por e-mail sobre status e retornos
+Exclusão com confirmação (autorizados)
+
+📊 Dashboards e Organização
+
+Saudação dinâmica com nome do usuário logado
+Cards e cores personalizadas por departamento
+Lista de tarefas filtradas por setor e status
+Cards de colaboradores com avatar baseado no nome
+
+
+✉️ Notificações e E-mails
+
+Envio automático de e-mail ao criar tarefa
+E-mail com detalhes da tarefa e links
+Atualização de status gera notificação e e-mail
+Retornos adicionados também geram alertas
+Adição de sino de notificação visual
+
+
+🖼️ Demonstração Visual
+
+
+
+Funcionalidade
+Captura
+Descrição
+
+
+
+Login e Boas-Vindas
+
+Interface com saudação horária personalizada
+
+
+Dashboard
+
+Tarefas por setor com destaque por status
+
+
+Cards de Colaboradores
+
+Avatar automático e visualização por setor
+
+
+Sino de Notificação
+
+Indicador visual de notificações
+
+
+Lista de Tarefas
+
+Exibição por equipe e com ações rápidas
+
+
+
+🔍 Dica: Certifique-se de que o repositório RaquelDaud180/Gerenciador-Tarefas- esteja público e que os arquivos estejam na raiz com os nomes exatos listados.
+
+
+📂 Estrutura da Aplicação
+
+app/
+static/
+css/ (estilos Tailwind CSS)
+js/ (scripts JavaScript)
+images/ (imagens do projeto)
+
+
+templates/
+login.html
+dashboard.html
+tasks.html
+
+
+__init__.py
+
+
+config/
+database.py (conexão MySQL e Oracle)
+email.py (configuração SMTP)
+
+
+requirements.txt (dependências Python)
+README.md
+run.py (execução do Flask)
