@@ -280,8 +280,3 @@ flask run
 - 📊 **Relatórios (PDF/Excel)** e métricas de produtividade  
 - 🔗 (Opcional) **Integrações externas** via API/ETL
 
----
-
-## 📝 Licença
-
-Este projeto está sob a licença **MIT**.
